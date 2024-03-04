@@ -10,45 +10,91 @@ body {
     color: #fff;
 }
 
-#header {
+header#hero {
     width: 100%;
-    padding: 20px 0px;
+    height: 100vh;
+    /* Make the hero section cover the full viewport height */
+    background: url('your-hero-background.jpg') no-repeat center center/cover;
+    /* Replace 'your-hero-background.jpg' with your actual background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Stack content vertically */
+    text-align: center;
+}
 
+.hero-content h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.hero-content a.btn-scroll {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    /* White border for the button */
+    color: #fff;
+    text-decoration: none;
+    /* to remove underline */
+    transition: background-color 0.3s, color 0.3s;
+    /* for smooth transition */
+}
+
+.hero-content a.btn-scroll:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+
+#content {
+    padding: 50px;
+    justify-content: center;
+    /* More padding around the content */
+}
+
+#contact-info {
+    margin-top: 20px;
+    /* Additional space above the contact info */
 }
 
 nav {
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50%;
 }
 
 nav ul {
-    width: 100%;
-    display: flex;
     list-style: none;
-    padding-left: 100;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    gap: 20px;
 }
 
 nav ul li {
-    flex-grow: 1;
-    /* Allow each li to grow and fill the container */
     text-align: center;
+    flex-grow: 1;
     border: 1px solid white;
     margin: 0 5px;
-    /* Add a little space between each box */
 }
 
 nav ul li a {
     display: block;
-    padding: 10px 0;
+    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    /* to remove underline*/
     transition: background-color 0.3s;
-    /* for smooth transition */
 }
 
 nav ul li a:hover {
     background-color: #ff004f;
-    color: white;
 }

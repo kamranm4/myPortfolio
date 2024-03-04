@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,23 +9,31 @@
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul id="header-elements">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </nav>
+    <header id="hero">
+        <nav>
+            <ul id="header-elements">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>A brief introduction or tagline goes here.</p>
+            <a href="#about-me" class="btn-scroll">Learn More About Me</a> <!-- Smooth scroll link -->
         </div>
+    </header>
+    <div id="content">
+        <section id="about-me">
+            <h1>About Me</h1>
+            <p>This section will contain information about me, my background, and my interests.</p>
+        </section>
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p>Here you can find the best ways to contact me.</p>
+        </section>
+        <!-- Add more sections as needed -->
     </div>
-    <section id="about-me">
-        <h1>About Me</h1>
-        <p>This section will contain information about me, my background, and my interests.</p>
-    </section>
-    <section id="contact-info">
-        <h2>Contact Information</h2>
-        <p>Here you can find the best ways to contact me.</p>
-    </section>
 </body>
+
+</html>
