@@ -121,36 +121,50 @@ nav ul li a:hover {
     border: 1px solid white;
     border-radius: 50%;
     opacity: 1;
-    animation: growFadeOut 3s linear forwards;
+    animation: growFade 3s linear forwards;
     z-index: 2;
     /* layer for drops behind text container */
 }
 
-@keyframes growFadeOut {
+@keyframes growFade {
     0% {
-        transform: scale(1);
+        transform: scale(0.1);
+        /* Start from nothing */
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.25);
+        /* Grow to its natural size */
         opacity: 1;
     }
 
     100% {
         transform: scale(2.5);
+        /* Continue growing while fading */
         opacity: 0;
     }
 }
 
 .large-drop {
-    animation: growFadeOutLarge 6s linear forwards;
+    animation: growFadeLarge 6s linear forwards;
 }
 
-@keyframes growFadeOutLarge {
+@keyframes growFadeLarge {
     0% {
-        transform: scale(1);
+        transform: scale(0.1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(2);
+        /* Grow to its natural size */
         opacity: 1;
     }
 
     100% {
-        transform: scale(5);
-        /* 500% size */
+        transform: scale(4);
+        /* Continue growing while fading */
         opacity: 0;
     }
 }

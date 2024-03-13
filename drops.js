@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createDrop(); // Initial drops
     }
 
-    setInterval(() => createDrop(), 600); // Add new drops over time
+    setInterval(() => createDrop(), 1000); // Add new drops over time
 
     // Event listener for creating large drops on click
     dropfield.addEventListener('click', (event) => {
