@@ -77,6 +77,8 @@ header#hero {
 
 #about-me {
     font-size: 1.5rem;
+    margin-top: 300px;
+
 }
 
 .about-description {
@@ -89,7 +91,10 @@ header#hero {
 
 
 #contact-info {
-    margin-top: 20px;
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .text-container {
@@ -138,6 +143,17 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #ff004f;
+}
+
+.contact-methods img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 24px;
+    height: auto;
+}
+
+.contact-methods p {
+    margin: 10px 0;
 }
 
 .dropfield {
