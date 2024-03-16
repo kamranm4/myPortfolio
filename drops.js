@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drop.style.left = `${x}px`;
             // Assign a random color for user-clicked drops
             const color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            drop.style.borderColor = currentColor;
+            drop.style.borderColor = color;
         } else {
             drop.style.top = `${Math.random() * 100}%`;
             drop.style.left = `${Math.random() * 100}%`;
