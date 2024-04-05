@@ -10,29 +10,6 @@ body {
     color: #fff;
 }
 
-.color-box {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin: 2px;
-    cursor: pointer;
-}
-
-#color-selector {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: black;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 3;
-}
-
-
-
 header#hero {
     width: 100%;
     height: 100vh;
@@ -190,15 +167,10 @@ header#hero {
 .project-media img,
 .project-media video {
     max-width: 100%;
-    /* This will ensure both image and video take the full width of their container */
     height: auto;
-    /* This maintains the aspect ratio of the image/video */
     border-radius: 15px;
-    /* Optional: if you want rounded corners */
     display: block;
-    /* Ensures no extra space at the bottom of the media */
     margin-bottom: 20px;
-    /* Space between the media and the link button */
 }
 
 nav {
@@ -270,30 +242,6 @@ nav ul li a:hover {
     animation: growFade 3s linear forwards;
     z-index: 2;
     /* layer for drops behind text container */
-}
-
-@media (max-width: 768px) {
-    #color-selector {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 60px;
-        overflow: hidden;
-        transition: width 0.5s ease;
-    }
-
-    #color-toggle span {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    .project-container,
-    .project-item,
-    .project-text,
-    .project-media {
-        width: 100%;
-    }
 }
 
 
