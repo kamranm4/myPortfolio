@@ -272,6 +272,31 @@ nav ul li a:hover {
     /* layer for drops behind text container */
 }
 
+@media (max-width: 768px) {
+    #color-selector {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        overflow: hidden;
+        transition: width 0.5s ease;
+    }
+
+    #color-toggle span {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .project-container,
+    .project-item,
+    .project-text,
+    .project-media {
+        width: 100%;
+    }
+}
+
+
 @keyframes growFade {
     0% {
         transform: scale(0.1);

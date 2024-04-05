@@ -68,3 +68,19 @@ document.addEventListener('DOMContentLoaded', () => {
         currentColor = 'white';
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const colorSelector = document.getElementById('color-selector');
+    const colorToggle = document.getElementById('color-toggle');
+
+    colorToggle.addEventListener('click', () => {
+        if (colorSelector.style.width === '60px' || !colorSelector.style.width) {
+            colorSelector.style.width = '250px'; // Or the full width of the color selector
+            colorToggle.innerHTML = '&#9664;'; // Left facing arrow when expanded
+        } else {
+            colorSelector.style.width = '60px';
+            colorToggle.innerHTML = '&#9654;'; // Right facing arrow when collapsed
+        }
+    });
+});
+
