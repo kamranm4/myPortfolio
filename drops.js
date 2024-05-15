@@ -1,4 +1,4 @@
-let currentColor = 'white';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const dropfield = document.querySelector('.dropfield');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drop.style.top = `${Math.random() * 100}%`;
             drop.style.left = `${Math.random() * 100}%`;
             // Regular drops are white
-            drop.style.borderColor = currentColor;
+            drop.style.borderColor = 'white';
         }
 
         dropfield.appendChild(drop);
@@ -37,50 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = event.clientX - dropfield.offsetLeft;
         const y = event.clientY - dropfield.offsetTop;
         createDrop(x, y, true); // Create a large drop with random color
-    });
-
-    const colorBoxes = document.querySelectorAll('.color-box');
-    colorBoxes.forEach(box => {
-        box.addEventListener('click', function () {
-            currentColor = this.style.backgroundColor;
-            document.querySelectorAll('body, p, h1, h2, h3, a, li').forEach(element => {
-                element.style.color = currentColor;
-            });
-            document.querySelectorAll('.drop').forEach(drop => {
-                drop.style.borderColor = currentColor;
-            });
-            document.querySelectorAll('#header-elements li').forEach(li => {
-                li.style.borderBottomColor = currentColor;
-            });
-        });
-    });
-
-    document.getElementById('reset-colors').addEventListener('click', () => {
-        document.querySelectorAll('body, p, h1, h2, h3, a, li').forEach(element => {
-            element.style.color = 'white';
-        });
-        document.querySelectorAll('.drop').forEach(drop => {
-            drop.style.borderColor = 'white';
-        });
-        document.querySelectorAll('#header-elements li').forEach(li => {
-            li.style.borderBottomColor = 'white';
-        });
-        currentColor = 'white';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const colorSelector = document.getElementById('color-selector');
-    const colorToggle = document.getElementById('color-toggle');
-
-    colorToggle.addEventListener('click', () => {
-        if (colorSelector.style.width === '60px' || !colorSelector.style.width) {
-            colorSelector.style.width = '250px'; // Or the full width of the color selector
-            colorToggle.innerHTML = '&#9664;'; // Left facing arrow when expanded
-        } else {
-            colorSelector.style.width = '60px';
-            colorToggle.innerHTML = '&#9654;'; // Right facing arrow when collapsed
-        }
     });
 });
 

@@ -282,3 +282,127 @@ nav ul li a:hover {
         opacity: 0;
     }
 }
+
+/* Base styles */
+body,
+html {
+    font-size: 14px;
+    /* Adjust base font size for better readability on small screens */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    /* Optimal size for mobile */
+}
+
+.hero-content p {
+    font-size: 1rem;
+    /* Optimal size for mobile paragraphs */
+}
+
+#content,
+.about-description,
+.project-text,
+.text-container {
+    margin: 0 5%;
+    /* Use percentage for side margins to ensure it uses more of the screen */
+    width: 90%;
+    /* Ensure content uses more width */
+    text-align: justify;
+    /* Keep text justified for a neat layout */
+}
+
+.project-item,
+.text-container {
+    padding: 10px;
+    /* Reduce padding to ensure content has more room */
+}
+
+nav ul {
+    flex-direction: column;
+    /* Stack nav items vertically on mobile */
+    width: 100%;
+    /* Ensure nav uses full width */
+    padding: 0;
+    /* Remove padding to use the screen width fully */
+}
+
+nav ul li {
+    width: 100%;
+    /* Full width for each nav item */
+}
+
+/* Adjusting Project Items and Text Containers */
+.project-item,
+.project-container,
+.text-container {
+    width: 100%;
+    /* Ensure these elements use the full available width */
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+
+    /* Medium Devices, Tablets */
+    body,
+    html {
+        font-size: 16px;
+        /* Slightly larger font for tablets */
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+        /* Increase size for better visibility */
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        /* Adjust text size for readability on tablets */
+    }
+
+    #content,
+    .about-description,
+    .project-text,
+    .text-container {
+        margin: 0 10%;
+        /* Adjust margins for tablet sizes */
+        width: 80%;
+        /* Adjust content width for tablets */
+        text-align: left;
+        /* Align text to left for larger screens */
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Horizontal nav for tablets and larger */
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* Large Devices, Desktops */
+    .hero-content h1 {
+        font-size: 6rem;
+        /* Restore original desktop size */
+    }
+
+    .hero-content p {
+        font-size: 2rem;
+        /* Restore original text size for desktop */
+    }
+
+    #content,
+    .about-description,
+    .project-text,
+    .text-container {
+        margin: 0 20%;
+        /* Larger margins for desktop */
+        width: 60%;
+        /* Adjust width for a centered look on desktop */
+    }
+
+    nav ul li {
+        width: auto;
+        /* Auto width for desktop nav items */
+    }
+}
